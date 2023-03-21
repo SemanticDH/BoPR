@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<style type="text/css">
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>BoPR</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">BoPR: Body-aware Part Regressor for Human Shape and Pose Estimation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/cyk990422" target="_blank">Yongkang Cheng</a><sup>1,2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=o31BPFsAAAAJ&hl=en" target="_blank">Shaoli Huang</a><sup>2,*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=bePJGzMAAAAJ" target="_blank">Jifeng Ning</a><sup>1</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://scholar.google.com/citations?hl=zh-CN&user=4oXBp9UAAAAJ" target="_blank">Ying Shan</a><sup>2</sup>,</span>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Northwest A&F University, <sup>2</sup>Tencent AI Lab</span>
+                    <!--<span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2303.05938.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/ZhengdiYu/Arbitrary-Hands-3D-Reconstruction" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2303.05938" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/in-the-wild.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        BoPR</span> is a body reconstruction method that takes RGB monocular images as input and uses body reference features as conditions to avoid depth ambiguity of parts.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper presents a novel approach for estimating human body shape and pose from monocular images that effectively addresses the challenges of occlusions and depth ambiguity. Our proposed method BoPR,the Body-aware Part Regressor, first extracts features of both the body and part regions using an attention-guided mechanism. We then utilize these features to encode extra part-body dependency for per-part regression, with part features as queries and body feature as a reference. This allows our network to infer the spatial relationship of occluded parts with the body by leveraging visible parts and body reference information. Our method outperforms existing state-of-the-art methods on two benchmark datasets, and our experiments show that it significantly surpasses existing methods in terms of depth ambiguity and occlusion handling. These results provide strong evidence of the effectiveness of our approach.
+          </p>
+          <p>
+            <img src="static/images/abs.png" alt="Additional Results" class="center-image blend-img-background"/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Method -->
+<section class="section" id="method">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <center>
+		<table align=center width=850px>
+			<tr>
+				<td width=850px>
+					<center>
+						<img class="round" style="width:850px" src="static/images/borp-met.png"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+		<table align=center width=850px>
+			<tr>
+				<td>
+					Given an input image, our method first extracts body and part features based on a soft attention mechanism. Then each part feature is concatenated with the body feature as an input token to the transformer to encode body-aware part features for camera prediction and SMPL parameter regression.
+				</td>
+			</tr>
+		</table>
+	  </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+<!-- Results -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+	      <div id="results-carousel" class="carousel results-carousel">
+	       <div class="item">
+		<!-- Your image here -->
+		<img src="static/images/res1_qual.png" alt="MY ALT TEXT"/>
+		<h2 class="subtitle has-text-centered">
+		  Qualitative comparison of PARE, CLIFF, and our method BOPR on in-the-wild datasets including LSPET (Row1-3) and 3DPW (Rows4-5).Our method significantly outperforms other methods in challenging scenarios such as self-occlusion and depth ambiguity.
+		</h2>
+	      </div>
+	      <div class="item">
+		<!-- Your image here -->
+		<img src="static/images/res1_att.png" alt="MY ALT TEXT"/>
+		<h2 class="subtitle has-text-centered">
+		  The role of body-reference feature.
+		</h2>   
+	      </div>
+	      
+    </div>
+  </div>
+</div>
+</div>
+</section>
+	
+<!-- End Results -->
+
+
+<!-- Application -->
+<!--
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+	      <h2 class="title is-3">Applications</h2>
+	      <div id="results-carousel" class="carousel results-carousel">
+		<div class="item item-video1">
+		  <video poster="" id="video1" autoplay controls muted loop height="100%">
+-->
+		    <!-- Your video file here -->
+<!--
+		    <source src="static/videos/intro_noshadow.mp4"
+		    type="video/mp4">
+		  </video>
+		</div>
+		<div class="item item-video2">
+		  <video poster="" id="video2" autoplay controls muted loop height="100%">
+-->
+		    <!-- Your video file here -->
+<!--
+		    <source src="static/videos/v3_body.mp4"
+		    type="video/mp4">
+		  </video>
+		</div>
+		<div class="item item-video2">
+		  <video poster="" id="video2" autoplay controls muted loop height="100%">
+-->
+		    <!-- Your video file here -->
+<!--
+		    <source src="static/videos/single-cropped.mp4"
+		    type="video/mp4">
+		  </video>
+		</div>
+		<div class="item item-video3">
+		  <video poster="" id="video3" autoplay controls muted loop height="100%">\
+-->
+		    <!-- Your video file here -->
+<!--
+		    <source src="static/videos/qin.mp4"
+		    type="video/mp4">
+		  </video>
+	</div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- End Application -->
+
+<!-- Demo video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/vid2.mp4"
+        type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End Demo video -->
+
+	
+<!-- Paper poster -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Technical Paper</h2>
+
+      <br>
+	<hr>
+	<!-- <table align=center width=450px> -->
+	     <table align=center width=700px> 
+		<tr>
+			<td><a href="https://arxiv.org/pdf/2303.05938.pdf"><img class="layered-paper-big" style="height:175px" src="static/images/paper.jpg"/></a></td>
+			<td><span style="font-size:10pt">Yongkang Cheng, Shaoli Huang, Jifeng Ning, Ying Shan<br>
+				<b>BoPR: Body-aware Part Regressor for Human Shape and Pose Estimation</b>
+        <!--
+        <br>
+				In Conference on Computer Vision and Pattern Recognition (CVPR), 2023.<br>-->
+				<!--(<a href="https://arxiv.org/pdf/2303.05938.pdf">camera ready</a>)<br>-->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+      <!-- <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe> -->
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+<!--
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{yu2023acr,
+  title = {ACR: Attention Collaboration-based Regressor for Arbitrary Two-Hand Reconstruction},
+  author = {Yu, Zhengdi and Huang, Shaoli and Chen, Fang and Breckon, Toby P.},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month     = {June},
+  year      = {2023}
+  }</code></pre>
+    </div>
+</section>
+-->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+	  <p>
+	       This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+               Commons Attribution-ShareAlike 4.0 International License</a>.
+	       
+	       This page was built using the <a href="https://nerfies.github.io/" target="_blank">Nerfies website</a>.
+               You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+	  </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
